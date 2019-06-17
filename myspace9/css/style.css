@@ -1,0 +1,223 @@
+body,
+div.title h1 {
+    margin: 0;
+}
+
+div.title {
+    width: 100%;
+    color: #fff;
+    text-indent: 30px;
+    background-color: darkgrey;
+    padding: 1px;
+    margin-top: 20px;
+}
+
+div.title h1 {
+    margin: 5px;
+}
+
+
+/* 全体 */
+
+div.container {
+    width: 1000px;
+    /* padding: 30px; */
+    margin: auto; /*ブラウザ中央に配置*/
+}
+
+div.container div {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    /* padding: 1%; */
+    position: relative;
+}
+
+
+/* 左コンテンツ */
+
+div.left_contents {
+    width: 30％;
+    float: left;
+    margin: 30px;
+}
+
+ul.navi {
+    width: 220px;
+    margin: 0px;
+    padding: 0;
+}
+
+div.category {
+    background-color: aqua;
+    padding: 10px;
+    cursor: pointer;
+    text-indent: 30px;
+    background: url("../img/button1.png");
+}
+
+div.open {
+    background: url("../img/button2.png");
+    color: #fff;
+}
+
+ul.navi,
+ul.menu {
+    list-style: none;
+    margin: 0;
+}
+
+ul.menu {
+    background-color: greenyellow;
+    padding: 0;
+}
+
+ul.menu li {
+    padding: 10px;
+    background: url("../img/button3.jpg");
+    text-indent: 30px;
+}
+
+ul.menu li.rollover {
+    background: url("../img/button4.jpg")
+}
+
+ul.menu li a {
+    text-decoration: none;
+    color: black;
+}
+
+div.advertisement{
+    background-color: brown;
+    height: 150px;
+}
+
+
+/* 右コンテンツ */
+
+div.right_contents {
+    float: right;
+    width: 66%;
+    margin: 30px;
+}
+
+/* ★以下スライダー処理 */
+
+/* ★スライダー全体の枠 */
+#slider {
+    position: relative;
+    margin: 20px auto;
+    padding-top: 20px;
+    border-top: 1px solid #aaa;
+    border-bottom: 1px solid #aaa;
+    /* border-radius: 10px; */
+    width: 1000px;
+    /* box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); */
+}
+
+#slider a:focus {
+    outline: 0;
+}
+
+/* スライダー画像の枠  top,leftで配置場所を移動できる*/
+
+.slider-view {
+    position: relative;
+    left: 210px;
+    margin: 10px 40px 30px;
+    border: 1px solid #bbb;
+    width: 500px; /* スライダーで表示するエリアの大きさ */
+    height: 375px;
+    overflow: hidden; /* 必須 */
+}
+
+/* width は js で指定するのでここでは書かない */
+.slider-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* スライドする画像の装飾 */
+.slider-container div {
+    position: relative; /* ループ処理に使う */
+    float: left;
+    width: 500px; /* view と同じ大きさに */
+    height: 375px;
+}
+
+/* デモ用 --------*/
+.slider-container div a {
+    display: block;
+}
+
+.slider-container div a:hover {
+    color: #600;
+}
+
+/* 進む、戻るの配置とデコレーション */
+#slide-prev, #slide-next {
+    position: absolute;
+    top: 60px;
+    color: #e0e0e0;
+    font-size: 60px;
+    line-height: 1;
+    text-decoration: none;
+    text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.3);
+}
+
+/* 前へボタンの装飾 */
+#slide-prev {
+    left: 80px;
+    top: 180px;
+    transform: scale(2.0);
+}
+
+/* 次へボタンの装飾 */
+#slide-next {
+    right: 80px;
+    top: 180px;
+    transform: scale(2.0);
+}
+
+/* ボタンにカーソル乗ったときに色変える */
+#slide-prev:hover,
+#slide-next:hover {
+    color: #ccc;
+    text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.5);
+}
+
+/* ページ移動ドットの配置とデコレーション */
+.slider-pagination {
+    position: absolute;
+    top: 412px;
+    left: 50%;
+    margin-left: -50px;
+    width: 100px;
+}
+
+/* ページ移動ドットのリンク部分 */
+.slider-pagination a {
+    float: left;
+    margin: 5px 5px 0;
+    border-radius: 5px;
+    width: 10px;
+    height: 10px;
+    overflow: hidden;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5) inset;
+    background: #eee;
+    text-indent: -9999px;
+    vertical-align: middle;
+}
+
+/* ページ移動ドットのリンク部分にホバーした時 */
+.slider-pagination a:hover {
+    background: #ccc;
+}
+
+/* 現在表示しているコンテンツと同じページナンバー */
+.slider-pagination a.current {
+    box-shadow: 1px 1px 2px rgba( 0,   0,   0, 0.5) inset,
+                0   0   2px rgba(68, 170, 238, 0.5);
+    background: #4ae;
+}
+
